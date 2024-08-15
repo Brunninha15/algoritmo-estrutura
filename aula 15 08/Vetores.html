@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Vetores</title>
+</head>
+
+<body>
+    <script>
+        let alunos = []
+        function lerDadosAlunos() {
+            let nome = prompt("digite o nome do aluno:")
+            let faltas = parseInt(prompt("Digite o numero de faltas do aluno:"))
+            let média = parseFloat(prompt("Digite a média do aluno:"))
+
+            let aluno = {
+                nome: nome,
+                faltas: faltas,
+                média: média
+            };
+
+            alunos.push(aluno)
+        }
+        for (let i = 0; i < 4; i++) {
+            lerDadosAlunos();
+        }
+        window.alert("Listagem dos Alunos:");
+        for (let aluno of alunos) {
+            window.alert('nome: ${aluno.nome}, Faltas: ${aluno.faltas}, Media: ${aluno.media}');
+        }
+
+    </script>
+</body>
+
+</html>
